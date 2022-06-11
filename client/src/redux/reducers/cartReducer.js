@@ -5,7 +5,7 @@ const initialState = {
         'Fried Spring Rolls': {
             num: 0,
             img: 'https://rasamalaysia.com/wp-content/uploads/2015/03/fried_spring_rolls_thumb.jpg',
-            title: 'Fried Spring Rolls',
+            title: 'This is a test!',
             price: '2.95',
             description: 'chicken or vegetable',
             meal: 'appetizer'
@@ -13,7 +13,7 @@ const initialState = {
         'Gai Of Nuur Satay': {
             num: 0,
             img: 'https://www.kuechengoetter.de/uploads/media/960x960/07/47607-satay-spiesschen-mit-erdnusssauce-gai-satay-sai-salad-daeng-gwa.jpg?v=1-0',
-            title: 'Gai Of Nuur Satay',
+            title: 'This probably works!',
             price: '4.95',
             description: 'skewered chicken or beef with a peanut sauce',
             meal: 'appetizer'
