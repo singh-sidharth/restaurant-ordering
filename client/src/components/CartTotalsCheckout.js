@@ -16,16 +16,16 @@ export default function CartTotalsCheckout(props) {
                             Products Price
                         </Card.Text>
                         <Card.Text>
-                            ${props.totalPrice}
+                            ₹ {props.totalPrice}
                         </Card.Text>
                     </Card.Body>
 
                     <Card.Body className='d-flex justify-content-between p-2'>
                         <Card.Text>
-                            Delivery
+                            Food
                         </Card.Text>
                         <Card.Text>
-                            ${3.50}
+                            ₹ {3.50}
                         </Card.Text>
                     </Card.Body>
 
@@ -34,7 +34,7 @@ export default function CartTotalsCheckout(props) {
                             Total
                         </Card.Text>
                         <Card.Text>
-                            ${props.totalPrice + 3.50}
+                            ₹ {props.totalPrice + 3.50}
                         </Card.Text>
                     </Card.Body>
                     <Card.Footer>

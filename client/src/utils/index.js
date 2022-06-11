@@ -1,6 +1,6 @@
 import Home from '../pages/Home'
 import Header from '../components/Header'
-import Delivery from '../pages/Delivery'
+import Food from '../pages/Food'
 import Error from '../pages/Error'
 import Gallery from '../pages/Gallery'
 import MenuEvening from '../pages/menus/Evening'
@@ -14,5 +14,5 @@ import Readme from '../pages/Readme'
 import Admin from '../pages/Admin'
 
 export {
-    Home, Header, Delivery, Error, Gallery, MenuEvening, MenuLunch, Cart, Login, Signup, Checkout, Terms, Readme, Admin
+    Home, Header, Food, Error, Gallery, MenuEvening, MenuLunch, Cart, Login, Signup, Checkout, Terms, Readme, Admin
 }

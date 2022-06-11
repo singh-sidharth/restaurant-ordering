@@ -12,15 +12,15 @@ Home page `/home`:
     * You can scroll and see pictures with effect, and get information about the restaurant.
     * Each of the pages in the app is accompanied by a navbar that lets you navigate between the different app pages. The navbar also contains a cart button which is used as a pop-up on mouseover, Above it is a number showing the quantity of products in the cart.
 
-* Deliveries page `/delivery`:
+* Food Menu page `/Food`:
     * You can add a product to the cart
     * You can use search input to search for a specific product by description, title or price
     
 * Gallery page `/gallery`:
-    * Image gallery received from the server (simulates access to the database)
+    * Image gallery received from the server (simulates access to the database) [REMOVED]
     
 * Menu pages `/menu`:
-    * Two menu pages, render the objects iteratively.
+    * Two menu pages, render the objects iteratively. [REMOVED]
     
 * Admin page `/admin`:
     * An admin page can only be accessed if an admin user is logged in.

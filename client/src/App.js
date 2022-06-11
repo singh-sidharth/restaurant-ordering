@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import {Header, Home, Delivery, Error, Gallery, MenuLunch, MenuEvening, Cart, Login, Signup, Checkout, Terms, Readme, Admin} from './utils'
+import {Header, Home, Food, Error, Gallery, MenuLunch, MenuEvening, Cart, Login, Signup, Checkout, Terms, Readme, Admin} from './utils'
 import Footer from "./components/Footer";
 import './App.css';
 import {connect} from "react-redux";
@@ -35,10 +35,10 @@ class App extends Component {
                 <div className="App">
                     <Header className="Header"/>
                     <Switch>
-                        <Route exact path="/delivery" component={Delivery}/>
-                        <Route exact path="/gallery" component={Gallery}/>
+                        <Route exact path="/food" component={Food}/>
+                        {/* <Route exact path="/gallery" component={Gallery}/>
                         <Route exact path="/menu.lunch" component={MenuLunch}/>
-                        <Route exact path="/menu.evening" component={MenuEvening}/>
+                        <Route exact path="/menu.evening" component={MenuEvening}/> */}
                         <Route exact path="/cart" component={Cart}/>
                         <Route exact path="/login" component={Login}/>
                         {/* <Route exact path="/signup" component={Signup}/> */}

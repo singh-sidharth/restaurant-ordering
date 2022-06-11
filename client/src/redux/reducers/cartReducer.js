@@ -2,36 +2,35 @@ const initialState = {
     total: 0,
     totalPrice: 0,
     items: {
-        'Fried Spring Rolls': {
+        'Fiery Chicken Wings': {
             num: 0,
-            img: 'https://rasamalaysia.com/wp-content/uploads/2015/03/fried_spring_rolls_thumb.jpg',
-            title: 'This is a test!',
-            price: '2.95',
-            description: 'chicken or vegetable',
+            img: 'https://d21klxpge3tttg.cloudfront.net/wp-content/uploads/2017/05/featured-nashville-hot-wings-1024x577.jpg',
+            title: 'Fiery Chicken Wings',
+            price: '375',
+            description: 'Smoked chicken wings with a fiery hot pepper sauce',
             meal: 'appetizer'
         },
-        'Gai Of Nuur Satay': {
+        'Spaghetti Aglio e Olio': {
             num: 0,
-            img: 'https://www.kuechengoetter.de/uploads/media/960x960/07/47607-satay-spiesschen-mit-erdnusssauce-gai-satay-sai-salad-daeng-gwa.jpg?v=1-0',
-            title: 'This probably works!',
-            price: '4.95',
-            description: 'skewered chicken or beef with a peanut sauce',
+            img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2021%2F10%2F27%2F8962968_original-Tammy-2000.jpg',
+            title: 'Spaghetti Aglio e Olio',
+            price: '299',
+            description: 'Classic Italian pasta with garlic, olive oil, parsley, and Parmigiano-Reggiano cheese',
             meal: 'appetizer'
         },
         'Tofu Tod': {
             num: 0,
             img: 'http://www.rachelcooksthai.com/wp-content/uploads/2016/01/fried-tofu-20.jpg',
             title: 'Tofu Tod',
-            price: '4.75',
+            price: '249',
             description: 'fried tofu with a mild chili peanut sauce',
             meal: 'appetizer'
         },
         'Fresh Thai Summer Roll': {
             num: 0,
-
             img: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/6/0/FN_Chicken-Summer-Rolls_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371597708666.jpeg',
             title: 'Fresh Thai Summer Roll',
-            price: '3.95',
+            price: '300',
             description: 'with shrimp in a tamarind sauce',
             meal: 'appetizer'
         },
@@ -39,7 +38,7 @@ const initialState = {
             num: 0,
             img: 'https://media1.fdncms.com/riverfronttimes/imager/u/original/2633986/sushi_house_white_tiger.jpg',
             title: 'Fried Tiger Shrimp Rolls',
-            price: '6.50',
+            price: '249',
             description: 'with a plum sauce',
             meal: 'appetizer'
         },
@@ -47,15 +46,23 @@ const initialState = {
             num: 0,
             img: 'https://static01.nyt.com/images/2017/08/16/dining/16kitchenrex/16Kitchen-recs-articleLarge.jpg',
             title: 'Thai Spare Ribs',
-            price: '8.95',
+            price: '385',
             description: 'glazed and grilled pork ribs',
             meal: 'appetizer'
+        },
+        'Rib Eye Steak': {
+            num: 0,
+            img: 'https://ichef.bbci.co.uk/food/ic/food_16x9_1600/recipes/rib-eye_steak_with_61963_16x9.jpg',
+            title: 'Rib Eye Steak',
+            price: '425',
+            description: ' with a rich and creamy béarnaise sauce, doesnt get better than this',
+            meal: 'main'
         },
         'Gai Pad Khing': {
             num: 0,
             img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Kai_phat_khing.jpg/250px-Kai_phat_khing.jpg',
             title: 'Gai Pad Khing',
-            price: '7.95',
+            price: '345',
             description: 'sauteed sliced chicken with mushrooms, peppers, cabbage, carrots and onions in a fresh ginger sauce',
             meal: 'main'
         },
@@ -63,32 +70,23 @@ const initialState = {
             num: 0,
             img: 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/EA260A79-7F93-4F6E-B587-A6C9AE1F4FDB/Derivates/8f2988c1-bc54-4806-b4a8-62d2dbfc8db8.jpg',
             title: 'Nuur Kra Prow',
-            price: '8.50',
+            price: '400',
             description: 'sauteed sliced beef with peppers, cabbage, carrots and onions in a chili basil sauce',
             meal: 'main'
         },
-        'Koong Pad Khing': {
+        'BBQ Chicken Pizza': {
             num: 0,
-
-            img: 'https://highheelgourmet.files.wordpress.com/2014/01/stir-fried-shrimp-with-green-bean-and-chili-paste-pad-phrik-khing-goong-6.jpg',
-            title: 'Koong Pad Khing',
-            price: '8.95',
-            description: 'sauteed shrimp with mushrooms, peppers, cabbage, carrots and onions in a fresh ginger sauce',
-            meal: 'main'
-        },
-        'Gai Kratiam': {
-            num: 0,
-            img: 'https://www.truetasteofthai.com/wp-content/uploads/2017/02/13.Gai-Kratiem-1-1-0-945x486.jpg',
-            title: 'Gai Kratiam',
-            price: '7.95',
-            description: 'sauteed sliced chicken with broccoli, cabbage and onions in a fresh garlic sauce',
+            img: 'https://www.tasteandtellblog.com/wp-content/uploads/2021/01/BBQ-Chicken-Pizza-1-768x512.jpg',
+            title: 'BBQ Chicken Pizza',
+            price: '475',
+            description: 'Top the dough with your favorite BBQ sauce, shredded chicken, and thinly sliced onion',
             meal: 'main'
         },
         'Fried Banana': {
             num: 0,
             img: 'https://img.delicious.com.au/DCI69ugT/w1200/del/2016/04/banana-fritters-28785-1.jpg',
             title: 'Fried Banana',
-            price: '7.50',
+            price: '275',
             description: 'deep-fried banana topped with coconut ice cream',
             meal: 'desert'
         },
@@ -96,16 +94,16 @@ const initialState = {
             num: 0,
             img: 'https://tarasmulticulturaltable.com/wp-content/uploads/2018/10/Tiramisu-Gelato-2-of-3-500x500.jpg',
             title: 'Gelato',
-            price: '4.95',
-            description: 'seasonal flavor made in-house',
+            price: '300',
+            description: 'seasonal flavor made in-house with the best ingredients',
             meal: 'desert'
         },
-        'Khao Tom Mud': {
+        'Death By Chocolate': {
             num: 0,
-            img: 'https://cdn1.foap.com/images/2dcafea3-60c0-4917-a694-91abfe0f5da9/w640.jpeg?1510622824',
-            title: 'Khao Tom Mud',
-            price: '8.50',
-            description: 'steamed sticky rice in a banana leaf with baby banana',
+            img: 'https://irepo.primecp.com/2015/04/218935/Death-By-Chocolate_ArticleImage-CategoryPage_ID-977283.jpg?v=977283',
+            title: 'Death by Chocolate',
+            price: '249',
+            description: 'A must try for all chocolate lovers',
             meal: 'desert'
         }
     }

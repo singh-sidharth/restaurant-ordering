@@ -47,17 +47,17 @@ class Header extends Component {
             <Navbar inline collapseOnSelect className='my-auto text-uppercase shadow py-1' expand="lg" bg="white" sticky='top'>
                 <Navbar.Brand className='nav-link pl-0 ml-md-5 pl-md-5 font-weight-bold'>
                     <Link to='' className='text-dark'>
-                        Devil Wings Restaurants
+                        Devil's Wings 
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="h6 text-dark w-100">
                         <Nav.Link className='my-auto'>
-                            <Link to='delivery' onClick={this.handleCollapse} className='text-secondary'>
-                                Deliveries
+                            <Link to='Food' onClick={this.handleCollapse} className='text-secondary'>
+                                Food Menu
                             </Link>
                         </Nav.Link>
-                        <NavDropdown className='my-auto text-dark' title='MENU' id="collapsible-nav-dropdown">
+                        {/* <NavDropdown className='my-auto text-dark' title='MENU' id="collapsible-nav-dropdown">
                             <Link to='menu.lunch' onClick={this.handleCollapse} className='text-secondary ml-3 mr-4'>
                                 lunch
                             </Link>
@@ -68,12 +68,12 @@ class Header extends Component {
                                 evening
                             </Link>
 
-                        </NavDropdown>
-                        <Nav.Link className='my-auto'>
+                        </NavDropdown> */}
+                        {/* <Nav.Link className='my-auto'>
                             <Link to='gallery' onClick={this.handleCollapse} className='text-secondary'>
                                 gallery
                             </Link>
-                        </Nav.Link>
+                        </Nav.Link> */}
 
                         {this.props.loggedIn && this.props.email === 'admin' && <Nav.Link className='my-auto'>
                             <Link to='admin' onClick={this.handleCollapse} className='text-secondary'>

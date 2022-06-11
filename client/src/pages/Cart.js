@@ -47,11 +47,11 @@ function Cart(props) {
     </Row>;
     const empty = <div className='text-center'>
         <h2>
-            Your cart is currently empty...
+            You haven't added any items to order yet!
         </h2>
-        <Link to='delivery'>
+        <Link to='Food'>
             <Button variant='warning' className='mt-4'>
-                Back to Deliveries
+                Back to Menu
             </Button>
         </Link>
     </div>;

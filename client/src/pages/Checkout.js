@@ -58,7 +58,7 @@ class Checkout extends Component {
                 </Card>
 
                 <Card className='mt-3'>
-                    <Card.Header>DELIVERY ADDRESS</Card.Header>
+                    <Card.Header>Food ADDRESS</Card.Header>
                     <Card.Body>
                         <Card.Text>
                             {this.props.firstName} {this.props.lastName}

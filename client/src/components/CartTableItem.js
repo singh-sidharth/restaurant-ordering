@@ -26,9 +26,9 @@ class CartTableItem extends Component {
                            src={this.props.img} rounded/>
                 </td>
                 <td className='align-middle'>{this.props.title}</td>
-                <td className='align-middle'>${this.props.price}</td>
+                <td className='align-middle'> ₹ {this.props.price}</td>
                 <td className='align-middle'><CustomButtonGroup title={this.props.title} num={this.props.num}/></td>
-                <td className='align-middle'>${round(this.props.price * this.props.num)}</td>
+                <td className='align-middle'> ₹ {round(this.props.price * this.props.num)}</td>
             </tr>
         );
     }

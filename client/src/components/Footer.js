@@ -9,26 +9,25 @@ export default function Footer() {
             <Container>
                 <Row>
                     <Col xs={7} sm={8} className='border-right'>
-                        <p className='text-uppercase'>LOCATIONS</p>
+                        <p className='text-uppercase'>Absolutely Real Locations:</p>
                         <Row className='text-capitalize'>
                             <Col lg={3}>
-                                <p>Brooklyn
-                                    376 Fake Street
-                                    Brooklyn, NY — 11231
-                                    (718) 555-1234
+                                <p>Generic ABC Street Name,
+                                    Generic Locality,
+                                    Your country.
                                 </p>
                             </Col>
                             <Col lg={3}>
-                                <p>Queens
-                                    47-33 Fake Street
-                                    Long Island City, NY — 11101
-                                    (347) 555-1234</p>
+                                <p>Unsuspicious Lane,
+                                    Very safe District,
+                                     3rd World Country.
+                                </p>
                             </Col>
                             <Col lg={3}>
-                                <p>Food Truck
-                                    25 Fake Street
-                                    New York, NY — 10003
-                                    (917) 555-1234</p>
+                                <p>Confusing Street,
+                                    Unknown Avenue,
+                                     City you hate.
+                                </p>
                             </Col>
                         </Row>
 
@@ -42,7 +41,7 @@ export default function Footer() {
 
                             <p>
                                 Friday — Sunday
-                                <p>11am — 11pm</p>
+                                <p>Kahin aur party karo</p>
                             </p>
                         </Col>
                     </Col>

@@ -24,7 +24,7 @@ export default function Readme() {
                         <div>
                             <h4>What are you selling?</h4>
                             <ul>
-                                <li>Our store is basically a restaurant and we sell food through delivery to the customer's house.</li>
+                                <li>Our store is basically a restaurant and we sell food through Food to the customer's house.</li>
                             </ul>
                         </div>
 
@@ -40,7 +40,7 @@ export default function Readme() {
                                 of products in the cart.</p>
                             <ul>
                                 <li>
-                                    <p>Deliveries page <code>/delivery</code>:</p>
+                                    <p>Food Menu page <code>/Food</code>:</p>
                                     <ul>
                                         <li>You can add a product to the cart</li>
                                         <li>You can use search input to search for a specific product by description, title or price</li>

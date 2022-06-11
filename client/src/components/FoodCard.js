@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import CustomButtonGroup from "./CustomButtonGroup";
 
-export default function DeliveryCard(props) {
+export default function FoodCard(props) {
 
         const height = window.innerHeight < 1200 ? (window.innerHeight < 400 ? '10em': '13em'): '18em';
 
@@ -17,7 +17,7 @@ export default function DeliveryCard(props) {
                                 <Col xs={7} className='text-capitalize'>{props.title}</Col>
                                 <Col className='text-right px-0'>
                                     <p className='mx-2 my-0 p-0 text-secondary'>
-                                        ${props.price}
+                                        ₹ {props.price}
                                     </p>
                                 </Col>
                             </Row>

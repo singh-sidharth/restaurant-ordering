@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import DeliveryCard from "./DeliveryCard";
+import FoodCard from "./FoodCard";
 import { connect } from "react-redux";
 import {Form, FormControl} from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 import InputGroup from "react-bootstrap/InputGroup";
 
-class DeliveryMenu extends Component {
+class FoodMenu extends Component {
     state = {
         search: ''
     };
@@ -24,7 +24,7 @@ class DeliveryMenu extends Component {
             ).map(item => this.cardRender(item));
     };
 
-    cardRender = (item) => <DeliveryCard img={item.img} title={item.title} price={item.price} description={item.description} num={item.num}/>;
+    cardRender = (item) => <FoodCard img={item.img} title={item.title} price={item.price} description={item.description} num={item.num}/>;
 
     render() {
         const appetizer = this.itemsIterate('appetizer'),
@@ -32,7 +32,7 @@ class DeliveryMenu extends Component {
             desert = this.itemsIterate('desert');
 
         return (
-            <Container className='Delivery'>
+            <Container className='Food'>
                 <Form className='justify-content-center' inline>
                     <InputGroup style={{width: "50%"}}>
                         <FormControl onChange={this.handleChange} type="text" placeholder='Search items'/>
@@ -63,7 +63,7 @@ class DeliveryMenu extends Component {
 
                 {desert.length > 0 &&
                 <>
-                    <h1 className='pt-5 mx-auto'>Main Course</h1>
+                    <h1 className='pt-5 mx-auto'>Dessert</h1>
                     <Row className='pb-3'>
                         {desert}
                     </Row>
@@ -88,4 +88,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(DeliveryMenu);
+export default connect(mapStateToProps)(FoodMenu);
