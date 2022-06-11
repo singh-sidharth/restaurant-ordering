@@ -11,10 +11,10 @@ import ColumnsContainer from "../components/ColumnsContainer";
 export default function Home() {
     return (
         <React.Fragment className='Home'>
-            <CustomParallax title="Devil's Wings "text="Why are you reading this?" img={home_top} height='40em' />
+            <CustomParallax title="Devil's Wings "text="Why are you reading this? ヾ(`ヘ´)ﾉﾞ" img={home_top} height='65em' />
             <CustomContainer/>
             <CustomParallax title='eat together'
-                            text='Every plate achieves that elusive, cuisine-defining balance of sweet, salty, and sour — even dessert.'
+                            text='{Insert here a cliched stereotypical statement of us bring you the very best dining experience}'
                             img={home_sitting} height='30em'/>
             <HomeCards/>
             <ColumnsContainer/>

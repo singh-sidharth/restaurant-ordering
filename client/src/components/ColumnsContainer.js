@@ -6,30 +6,23 @@ export default function ColumnsContainer() {
         <Container className='mt-4'>
             <Row className='text-center'>
                 <Col>
-                    <h2>A DESTINATION</h2>
+                    <h2>But in all seriousness</h2>
                 </Col>
             </Row>
             <Row className='mt-3 text-left h-auto mb-4'>
                 <Col className='mx-auto' md={5}>
-                    <p>Praesent commodo cursus magna,
-                        Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at
-                        lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Sed posuere
-                        consectetur est at lobortis. Maecenas faucibus mollis interdum. Nulla vitae elit libero,
-                        a pharetra augue. Cras justo odio, dapibus ac facilisis.
-                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo
-                        cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed
-                        consectetur.
+                    <p>We really do pride ourselves in being providing customers with the 
+                        most elite experience of fine dining possible. We've got chefs 
+                        with all the skills to compliment each other, and more importantly,
+                        carry the passion to serve meals that are nothing short of spectacular.
                     </p>
                 </Col>
 
                 <Col className='mx-auto' md={5}>
-                    <p>Praesent commodo cursus magna,
-                        Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis
-                        euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                        fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum.
-                        Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit
-                        sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Integer posuere
-                        erat a ante venenatis dapibus posuere velit luctus sem adipiscing elit.
+                    <p>We firmly belive that good food goes a long way, and can very easily be called 
+                        one of life's simplest joys. The aim to strive to be the very best, that no 
+                        one ever was, in providing such pleasures to anyone who walks through our doors.
+                        I think we've now exhausted our vocabulary here, whew!
                     </p>
                 </Col>
             </Row>

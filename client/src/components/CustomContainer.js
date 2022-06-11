@@ -6,11 +6,9 @@ export default function CustomContainer() {
         <Container className='h-auto my-4 pt-3'>
             <Row className='h-100'>
                 <Col className="text-center m-auto">
-                    <h2 className='text-uppercase'>a destination</h2>
-                    <p className='m-auto w-75 pb-lg-5'>Praesent commodo
-                        cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis
-                        lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis
-                        ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.
+                    <h2 className='text-uppercase'>Yours Truly</h2>
+                    <p className='m-auto w-75 pb-lg-5'>Please pretend to be impressed by the audacious use of seemingly
+                    impactful words thrown in here to seem like we have any clue of what we're supposed to be doing here.
                     </p>
                 </Col>
             </Row>
