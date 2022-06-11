@@ -1,10 +1,13 @@
 package com.zephyr.models;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 
@@ -14,24 +17,33 @@ public class MenuDao{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="item_id")
-	private Long id;
+	private Long menuId;
 	private String name;
 	private Float cost;
 	private String description;
 	private String category;
-	public MenuDao(Long id, String name, Float cost, String description, String category) {
-		this.id = id;
+	@ManyToMany
+	private Set<CartDao> carts;
+	public MenuDao() {}
+	public MenuDao(Long menuId, String name, Float cost, String description, String category, Set<CartDao> carts) {
+		super();
+		this.menuId = menuId;
 		this.name = name;
 		this.cost = cost;
 		this.description = description;
 		this.category = category;
+		this.carts = carts;
 	}
-	public MenuDao() {}
-	public Long getId() {
-		return id;
+	@Override
+	public String toString() {
+		return "MenuDao [menuId=" + menuId + ", name=" + name + ", cost=" + cost + ", description=" + description
+				+ ", category=" + category + ", carts=" + carts + "]";
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public Long getMenuId() {
+		return menuId;
+	}
+	public void setMenuId(Long menuId) {
+		this.menuId = menuId;
 	}
 	public String getName() {
 		return name;
@@ -57,9 +69,10 @@ public class MenuDao{
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	@Override
-	public String toString() {
-		return "MenuDao [id=" + id + ", name=" + name + ", cost=" + cost + ", description=" + description
-				+ ", category=" + category + "]";
+	public Set<CartDao> getCarts() {
+		return carts;
+	}
+	public void setCarts(Set<CartDao> carts) {
+		this.carts = carts;
 	}
 }
