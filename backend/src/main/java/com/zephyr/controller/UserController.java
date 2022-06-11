@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.zephyr.models.MenuDao;
 import com.zephyr.models.OrderDao;
+import com.zephyr.models.OrderDto;
 import com.zephyr.service.UserService;
 
 import java.util.List;
@@ -25,7 +26,7 @@ public class UserController {
 	}
 	
 	@PostMapping("place_order")
-	public Long placeOrder(OrderDao order) {
+	public Long placeOrder(OrderDto order) {
 		return 0l;
 	}
 	
