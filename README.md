@@ -1,10 +1,5 @@
-# Mama's Restaurant - React ecommerce website
-Mama's Restaurant is an ecommerce website built using React, Redux integrated with Node.js and Express backend.
-
-A demo for the Website App is available [here](https://mamas-restaurant-app.herokuapp.com/).
-
-The app is responsive (suitable for different screen sizes - phone, tablet, etc.)
-![mamas restaurant](website.gif "mamas restaurant")
+# Devil's Wings Restaurant - React restaurant website
+Built using React, Redux integrated with Node.js and Express backend
 
 ## Pages
 Home page `/home`:
