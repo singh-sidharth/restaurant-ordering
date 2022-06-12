@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="order_tbl")
 public class OrderDao implements Serializable{
+	private static final long serialVersionUID = -6170246598686074259L;
 	@Id
 	@GeneratedValue
 	@Column(name="order_id")
@@ -24,7 +25,7 @@ public class OrderDao implements Serializable{
 	private String mobileNumber;
 	@Column(name="payment_status")
 	private String paymentStatus;
-	@OneToMany(mappedBy="order")
+	@OneToMany
 	private Set<CartDao> carts;
 	
 	public OrderDao() {}

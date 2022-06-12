@@ -23,6 +23,7 @@ import javax.persistence.TemporalType;
 @Table(name="cart_tbl")
 public class CartDao implements Serializable{
 	
+	private static final long serialVersionUID = -7374311315868195595L;
 	@Id
 	@GeneratedValue
 	@Column(name="cart_id")
