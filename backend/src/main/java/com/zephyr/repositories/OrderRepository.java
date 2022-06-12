@@ -11,8 +11,8 @@ import org.springframework.stereotype.Repository;
 import com.zephyr.models.OrderDao;
 
 public interface OrderRepository extends JpaRepository<OrderDao, String> {
-	@Query("Select o.orderId from OrderDao o where o.userId=?1 and o.paymentStatus='pending'")
-	List<Long> findOrderId(long userId);
+	@Query("Select o.orderId from OrderDao o where o.mobileNumber=?1 and o.paymentStatus='pending'")
+	List<Long> findOrderId(String mobileNumber);
 	
 	@Modifying
 	@Query("Update OrderDao o set o.paymentStatus='completed' where o.orderId= :id")

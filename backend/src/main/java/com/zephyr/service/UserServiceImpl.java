@@ -27,16 +27,20 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public Long placeOrder(OrderDto order) {
+	public long placeOrder(OrderDto order) {
 		long orderId = -1;
 		if(order.getOrderId() == -1) {
-			List<Long> matchedPending = this.orderRepo.findOrderId(Long.valueOf(1));
+			List<Long> matchedPending = this.orderRepo.findOrderId(order.getMobileNumber());
 			if(matchedPending.size() == 1) {
 				orderId = matchedPending.get(0).intValue();
+				
 				}
 			else {
 				OrderDao newOrder = new OrderDao();
 				newOrder.setPaymentStatus("pending");
+				newOrder.setMobileNumber(order.getMobileNumber());
+				newOrder.setUsername(order.getUserName());
+				newOrder.setTableId(order.getTableId());
 				orderId = this.orderRepo.save(newOrder).getOrderId();
 			}
 		}
@@ -46,8 +50,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public OrderDto getBill(long orderId) {
 		OrderDto billedCart = new OrderDto();
-		
-		
 		return billedCart;
 	}
 	

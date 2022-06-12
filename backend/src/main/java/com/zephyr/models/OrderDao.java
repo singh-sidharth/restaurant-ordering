@@ -17,18 +17,34 @@ public class OrderDao implements Serializable{
 	@GeneratedValue
 	@Column(name="order_id")
 	private Long orderId;
-	@Column(name="user_id", nullable = false)
-	private Long userId;
+	private Long tableId;
+	@Column(name="username", nullable = false)
+	private String username;
+	@Column(name="mobile_number", nullable=false)
+	private String mobileNumber;
 	@Column(name="payment_status")
 	private String paymentStatus;
 	@OneToMany(mappedBy="order")
 	private Set<CartDao> carts;
 	
 	public OrderDao() {}
-	public OrderDao(Long id, Long tableId, String paymentStatus) {
+	public OrderDao(Long id, Long tableId, String username, String paymentStatus) {
 		this.orderId = id;
-		this.userId = tableId;
+		this.username = username;
 		this.paymentStatus = paymentStatus;
+		this.tableId = tableId;
+	}
+	public Long getTableId() {
+		return tableId;
+	}
+	public void setTableId(Long tableId) {
+		this.tableId = tableId;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public Long getOrderId() {
 		return orderId;
@@ -36,11 +52,11 @@ public class OrderDao implements Serializable{
 	public void setOrderId(Long id) {
 		this.orderId = id;
 	}
-	public Long getTableId() {
-		return userId;
+	public String getMobileNumber() {
+		return mobileNumber;
 	}
-	public void setTableId(Long tableId) {
-		this.userId = tableId;
+	public void setMobileNumber(String mobileNumber) {
+		this.mobileNumber = mobileNumber;
 	}
 	public String getPaymentStatus() {
 		return paymentStatus;
@@ -50,7 +66,7 @@ public class OrderDao implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "OrderDao [id=" + orderId + ", tableId=" + userId + ", paymentStatus=" + paymentStatus + "]";
+		return "OrderDao [id=" + orderId + ", tableId=" + tableId+", username="+username + ", paymentStatus=" + paymentStatus + "]";
 	}
 	
 }

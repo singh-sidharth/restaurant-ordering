@@ -10,7 +10,7 @@ public interface UserService {
 	
 	public List<MenuDao> getMenu();
 	
-	public Long placeOrder(OrderDto order);
+	public long placeOrder(OrderDto order);
 	
 	public OrderDto getBill(long orderId);
 }
