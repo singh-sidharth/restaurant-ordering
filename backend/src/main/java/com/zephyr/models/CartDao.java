@@ -2,8 +2,10 @@ package com.zephyr.models;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,7 +15,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.MapsId;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,24 +26,24 @@ public class CartDao implements Serializable{
 	@Id
 	@GeneratedValue
 	@Column(name="cart_id")
-	private Long id; 
-	@ManyToOne(fetch=FetchType.LAZY, optional = false)
-	@JoinColumn(name="order_id", nullable=false)
+	private Long cartId; 
+	@ManyToOne(cascade=CascadeType.ALL, fetch =FetchType.EAGER, optional = false)
+	@JoinColumn(name="order_id")
 	private OrderDao order;
 	@Column(name="placed_at")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date placedAt;
-	@ManyToMany(mappedBy="carts")
-	@JoinTable(name="cart_to_ite_mapping",
-	joinColumns = @JoinColumn(name="menu_id"),
+	@ManyToMany
+	@JoinTable(name="individual_orders",
+	joinColumns = @JoinColumn(name="cart_id"),
 	inverseJoinColumns = @JoinColumn(name="item_id"))
-	private Set<MenuDao> menus;
+	private Set<MenuDao> menus = new HashSet<MenuDao>();
 	public CartDao() {}
 	public Long getId() {
-		return id;
+		return cartId;
 	}
 	public void setId(Long id) {
-		this.id = id;
+		this.cartId = id;
 	}
 	public OrderDao getOrder() {
 		return order;
@@ -63,16 +64,18 @@ public class CartDao implements Serializable{
 		this.menus = menus;
 	}
 	public CartDao(Long id, OrderDao order, Date placedAt, Set<MenuDao> menus) {
-		super();
-		this.id = id;
+		this.cartId = id;
 		this.order = order;
 		this.placedAt = placedAt;
 		this.menus = menus;
 	}
 	@Override
 	public String toString() {
-		return "CartDao [id=" + id + ", order=" + order + ", placedAt=" + placedAt + ", menus=" + menus + "]";
+		return "CartDao [id=" + cartId + ", order=" + order + ", placedAt=" + placedAt + ", menus=" + menus + "]";
 	}
 	
+	public void addItem(MenuDao item) {
+		this.menus.add(item);
+	}
 	
 }

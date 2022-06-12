@@ -7,6 +7,8 @@ public class OrderDto {
 	private long orderId;
 	
 	private List<ItemDto> cart;
+	
+	public OrderDto() {}
 
 	public OrderDto(long orderId, List<ItemDto> cart) {
 		super();

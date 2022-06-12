@@ -12,5 +12,5 @@ public interface UserService {
 	
 	public Long placeOrder(OrderDto order);
 	
-	public OrderDto getBill();
+	public OrderDto getBill(long orderId);
 }

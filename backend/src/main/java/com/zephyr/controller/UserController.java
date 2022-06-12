@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zephyr.models.MenuDao;
@@ -29,5 +30,10 @@ public class UserController {
 	public Long placeOrder(OrderDto order) {
 		return 0l;
 	}
+	
+//	@GetMapping("get_bill")
+//	public OrderDto getBill(@RequestParam(required = true, name = "orderId")Long orderId) {
+//		return new OrderDto();
+//		}
 	
 }

@@ -3,10 +3,8 @@ package com.zephyr.models;
 import java.io.Serializable;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -19,17 +17,17 @@ public class OrderDao implements Serializable{
 	@GeneratedValue
 	@Column(name="order_id")
 	private Long orderId;
-	@Column(name="table_id", nullable = false)
-	private String tableId;
+	@Column(name="user_id", nullable = false)
+	private Long userId;
 	@Column(name="payment_status")
 	private String paymentStatus;
-	@OneToMany(mappedBy="order", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="order")
 	private Set<CartDao> carts;
 	
 	public OrderDao() {}
-	public OrderDao(Long id, String tableId, String paymentStatus) {
+	public OrderDao(Long id, Long tableId, String paymentStatus) {
 		this.orderId = id;
-		this.tableId = tableId;
+		this.userId = tableId;
 		this.paymentStatus = paymentStatus;
 	}
 	public Long getOrderId() {
@@ -38,11 +36,11 @@ public class OrderDao implements Serializable{
 	public void setOrderId(Long id) {
 		this.orderId = id;
 	}
-	public String getTableId() {
-		return tableId;
+	public Long getTableId() {
+		return userId;
 	}
-	public void setTableId(String tableId) {
-		this.tableId = tableId;
+	public void setTableId(Long tableId) {
+		this.userId = tableId;
 	}
 	public String getPaymentStatus() {
 		return paymentStatus;
@@ -52,7 +50,7 @@ public class OrderDao implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "OrderDao [id=" + orderId + ", tableId=" + tableId + ", paymentStatus=" + paymentStatus + "]";
+		return "OrderDao [id=" + orderId + ", tableId=" + userId + ", paymentStatus=" + paymentStatus + "]";
 	}
 	
 }

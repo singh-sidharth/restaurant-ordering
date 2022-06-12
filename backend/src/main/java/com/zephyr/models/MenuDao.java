@@ -1,7 +1,9 @@
 package com.zephyr.models;
 
+import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
@@ -22,8 +26,9 @@ public class MenuDao{
 	private Float cost;
 	private String description;
 	private String category;
-	@ManyToMany
-	private Set<CartDao> carts;
+	@JsonIgnore
+	@ManyToMany(mappedBy="menus", cascade = CascadeType.ALL)
+	private Set<CartDao> carts = new HashSet<CartDao>();
 	public MenuDao() {}
 	public MenuDao(Long menuId, String name, Float cost, String description, String category, Set<CartDao> carts) {
 		super();
@@ -74,5 +79,8 @@ public class MenuDao{
 	}
 	public void setCarts(Set<CartDao> carts) {
 		this.carts = carts;
+	}
+	public void addCart(CartDao cart) {
+		this.carts.add(cart);
 	}
 }
